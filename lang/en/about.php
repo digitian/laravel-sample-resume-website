@@ -1,0 +1,41 @@
+<?php
+
+return [
+
+    'i_am_huseyin' => "Hi, I'm Hüseyin,",
+    'about_text_1' => 'I studied International Relations at Ege University, which gave me a broad perspective on people and systems, and later continued my education in Computer Programming at Anadolu University to follow my passion for technology. I also spent a semester in Warsaw, Poland, through Erasmus, an experience that taught me adaptability and opened me up to new cultures.',
+    'about_text_2' => 'Today, I work as a web developer, building user-friendly websites and digital solutions. I’ve collaborated with agencies like Deniz Web and Mindlook, where I gained valuable experience in teamwork, SEO, and performance optimization. What excites me most is combining creativity and problem-solving to turn ideas into something real on the web.',
+    'about_text_3' => 'I am also an amateur musician. I like to play the guitar and sing. Also, I like to do fitness, hiking, cycling and traveling.',
+    'education' => 'Education',
+    'work_experience' => 'Work Experience',
+    'ege_university' => 'Ege University',
+    'anadolu_university' => 'Anadolu University',
+    'bachelors_degree' => "Bachelor's Degree",
+    'associate_degree' => 'Associate Degree',
+    'int_relations' => 'International Relations',
+    'computer_prog' => 'Computer Programming',
+    'security_stud' => 'Security Studies',
+    'ege_desc' => 'I graduated from Ege University, Department of International Relations, where I gained a strong foundation in global perspectives and analytical thinking. My academic background has helped me develop problem-solving skills and the ability to understand complex systems—abilities I now apply to web development.',
+    'anadolu_desc' => 'I am currently studying Computer Programming at Anadolu University, where I focus on developing strong technical skills in software and web technologies. This education enhances my practical knowledge of programming languages, databases, and modern development tools. By combining academic learning with real-world projects, I continue to strengthen my expertise as a web developer.',
+    'akademia_sztuki_desc' => 'I had the opportunity to study abroad through the Erasmus program at Akademia Sztuki Wojennej in Warsaw, Poland, where I joined the Security Studies department for one semester. This experience broadened my international perspective and allowed me to engage with diverse academic and cultural environments. It also strengthened my adaptability and teamwork skills, which I now carry into my professional work as a web developer.',
+    'deniz_web' => 'Deniz Web Agency',
+    'mindlook_agency' => 'Mindlook Agency',
+    'remote_support' => 'Remote Support',
+    'deniz_web_desc' => 'At Deniz Web Agency, I worked as a Web Developer, contributing to both the frontend and backend of diverse websites and CRM systems. I improved performance, implemented SEO strategies, and collaborated closely with clients to meet their needs efficiently. Due to budget constraints within the company, I had to part ways with the agency, but the experience significantly strengthened my technical and professional skills.',
+    'mindlook_desc' => 'At Mindlook Agency, I provided remote support in web development, contributing to both frontend and backend processes. I developed and optimized web portals to enhance usability, implemented SEO strategies that boosted visibility, and collaborated with a dynamic startup team known for its innovative digital solutions.',
+    'jan' => 'Jan',
+    'feb' => 'Feb',
+    'mar' => 'Mar',
+    'apr' => 'Apr',
+    'may' => 'May',
+    'jun' => 'Jun',
+    'jul' => 'Jul',
+    'aug' => 'Aug',
+    'sep' => 'Sep',
+    'oct' => 'Oct',
+    'nov' => 'Nov',
+    'dec' => 'Dec',
+
+    'about_desc' => 'Hi, I’m Hüseyin Emeci, a web developer from İzmir. With a background in International Relations and Computer Programming, I create modern, user-friendly websites that bring ideas to life.',
+
+];

@@ -188,7 +188,7 @@
         <!-- list item -->
         <li>Linux server, CPanel</li>
         <!-- list item -->
-        <li>{{ __('main.git_knowledge') }}</li>
+        <li>Git, CI/CD</li>
         </ul>
         <!-- knowledge list end -->
 
@@ -199,7 +199,7 @@
         <div class="art-links-frame p-15-15">
 
         <!-- download cv button -->
-        <a href="files/cv.txt" class="art-link" download data-no-swup>{{ __('main.download_cv') }} <i class="fas fa-download"></i></a>
+        <a href="{{ app()->getLocale() === 'tr' ? asset('assets/documents/huseyin-emeci-turkce-ozgecmis.pdf') : asset('assets/documents/huseyin-emeci-english-resume.pdf') }}" class="art-link" download data-no-swup>{{ __('main.download_cv') }} <i class="fas fa-download"></i></a>
 
         </div>
         <!-- links frame end -->

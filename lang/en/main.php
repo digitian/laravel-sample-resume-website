@@ -7,6 +7,19 @@ return [
     'contact' => 'Contact',
     'blog' => 'Blog',
     
+    'welcome_text_1' => 'Welcome to',
+    'welcome_text_2' => 'My Personal Page',
+    'top_text_1' => 'I implement SEO strategies',
+    'top_text_2' => 'I improve website performance',
+    'top_text_3' => 'I build websites',
+    'top_text_4' => 'I use AI tools effectively',
+    'years_experience' => 'Years Experience',
+    'completed_projects' => 'Completed Projects',
+    'happy_customers' => 'Happy Customers',
+    'certifications' => 'Certifications',
+    'explore_now' => 'Explore Now',
+    'my_offers' => 'My Offers',
+    'references' => 'References',
     'freelance_available' => 'I am available for freelance hire',
     'job_definition' => 'Full Stack Web Developer',
     'profile_pic' => 'profile picture',
@@ -20,7 +33,9 @@ return [
     'german' => 'German',
     'copyright' => 'All rights reserved.',
     'server_management' => 'server management',
-    'git_knowledge' => 'GIT knowledge',
     'download_cv' => 'Download CV',
+
+    'website_title' => 'Huseyin Emeci | Personal Portfolio, Blog, Introduction',
+    'desc_home' => 'Hüseyin Emeci — Izmir-based full-stack web developer. Laravel & Livewire projects, SEO-friendly solutions, fast UIs, and real case studies. Explore my portfolio.',
 
 ];

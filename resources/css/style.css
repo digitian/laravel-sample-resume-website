@@ -211,6 +211,7 @@ a {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
+      align-items: center;
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
               justify-content: space-between;
@@ -1518,6 +1519,7 @@ content
   background: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
   -webkit-box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
           box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
+  height: -webkit-fill-available;
   padding: 30px;
   margin-bottom: 30px; }
   /* line 28, ../scss/_content.scss */
@@ -2085,6 +2087,7 @@ content
 .art-blog-card {
   position: relative;
   overflow: hidden;
+  height: -webkit-fill-available;
   -webkit-box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
           box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
   margin-bottom: 30px; }
@@ -2109,6 +2112,7 @@ content
     background: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
     padding: 30px;
     position: relative;
+    height: -webkit-fill-available;
     bottom: 0; }
   /* line 597, ../scss/_content.scss */
   .art-blog-card:hover .art-port-cover img {
@@ -2156,12 +2160,13 @@ content
 /* line 640, ../scss/_content.scss */
 .art-brand {
   width: 120px;
-  height: 120px;
+  height: 50px;
   margin: 0 auto;
   display: block;
   margin-bottom: 30px;
   opacity: 0.6;
   -webkit-transition: 0.4s ease-in-out;
+  object-fit: contain;
   transition: 0.4s ease-in-out; }
   /* line 649, ../scss/_content.scss */
   .art-brand:hover {

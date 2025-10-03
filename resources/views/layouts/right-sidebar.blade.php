@@ -26,47 +26,15 @@
         <!-- menu list -->
         <ul class="main-menu">
             <!-- menu item -->
-            <li class="menu-item current-menu-item"><a href="home.html">{{ __('main.homepage') }}</a></li>
+            <li class="menu-item{{ url()->current() === route(app()->getLocale() . '.home') ? ' current-menu-item' : '' }}"><a href="{{ route(app()->getLocale() . '.home')  }}">{{ __('main.homepage') }}</a></li>
             <!-- menu item -->
-            <li class="menu-item menu-item-has-children">
-            <a href="#." data-no-swup>{{ __('main.portfolio') }}</a>
-            <!-- sub menu -->
-            <ul class="sub-menu">
-                <!-- lvl 2 nav link -->
-                <li class="menu-item"><a href="portfolio-2-col.html">2 column</a></li>
-                <!-- lvl 2 nav link -->
-                <li class="menu-item"><a href="portfolio-3-col.html">3 column</a></li>
-                <!-- lvl 2 nav link -->
-                <li class="menu-item"><a href="portfolio-2-col-masonry.html">2 column masonry</a></li>
-                <!-- lvl 2 nav link -->
-                <li class="menu-item"><a href="portfolio-3-col-masonry.html">3 column masonry</a></li>
-                <!-- lvl 2 nav link -->
-                <li class="menu-item"><a href="portfolio-single.html">Single project</a></li>
-                <!-- lvl 2 nav link -->
-                <li class="menu-item"><a href="portfolio-single-2.html">Single project 2</a></li>
-            </ul>
-            <!-- sub menu end -->
-            </li>
+            <li class="menu-item{{ url()->current() === route(app()->getLocale() . '.about') ? ' current-menu-item' : '' }}"><a href="{{ route(app()->getLocale() . '.about')  }}">{{ __('main.aboutme') }}</a></li>
             <!-- menu item -->
-            <li class="menu-item"><a href="history.html">{{ __('main.aboutme') }}</a></li>
+            <li class="menu-item{{ url()->current() === route(app()->getLocale() . '.portfolio') ? ' current-menu-item' : '' }}"><a href="{{ route(app()->getLocale() . '.portfolio')  }}">{{ __('main.portfolio') }}</a></li>
             <!-- menu item -->
-            <li class="menu-item"><a href="contact.html">Contact</a></li>
+            <li class="menu-item{{ url()->current() === route(app()->getLocale() . '.blog') ? ' current-menu-item' : '' }}"><a href="{{ route(app()->getLocale() . '.blog')  }}">{{ __('main.blog') }}</a></li>
             <!-- menu item -->
-            <li class="menu-item menu-item-has-children">
-            <a href="#." data-no-swup>{{ __('main.blog') }}</a>
-            <!-- sub menu -->
-            <ul class="sub-menu">
-                <!-- lvl 2 nav link -->
-                <li class="menu-item"><a href="blog-2-col.html">2 column</a></li>
-                <!-- lvl 2 nav link -->
-                <li class="menu-item"><a href="blog-3-col.html">3 column</a></li>
-                <!-- lvl 2 nav link -->
-                <li class="menu-item"><a href="blog-post.html">Publication</a></li>
-            </ul>
-            <!-- sub menu end -->
-            </li>
-            <!-- menu item -->
-            <li class="menu-item"><a href="onepage.html" target="_blank" data-no-swup>Onepage</a></li>
+            <li class="menu-item{{ url()->current() === route(app()->getLocale() . '.contact') ? ' current-menu-item' : '' }}"><a href="{{ route(app()->getLocale() . '.contact')  }}">{{ __('main.contact') }}</a></li>
         </ul>
         <!-- menu list end -->
         </nav>
@@ -75,9 +43,11 @@
         <!-- language change -->
         <ul class="art-language-change">
         <!-- language item -->
-        <li><a href="#.">FR</a></li>
+        <li><a href="#.">DE</a></li>
         <!-- language item -->
-        <li class="art-active-lang"><a href="#.">EN</a></li>
+        <li><a href="#.">EN</a></li>
+        <!-- language item -->
+        <li class="art-active-lang"><a href="#.">TR</a></li>
         </ul>
         <!-- language change end -->
 

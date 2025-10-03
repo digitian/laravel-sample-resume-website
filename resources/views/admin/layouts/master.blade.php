@@ -7,6 +7,7 @@
     <meta name="robots" content="noindex">
     <title>@yield('title', 'Sayfa') | Yönetim Paneli | Hüseyin Emeci</title>
     @vite(['resources/css/admin.css'])
+    @stack('styles')
     <style>
       @import url('https://rsms.me/inter/inter.css');
       :root {
@@ -134,5 +135,6 @@
     <!-- Tabler Core -->
     <script src="{{ asset('assets/admin/js/tabler.min.js') }}" defer></script>
     <script src="{{ asset('assets/admin/js/demo.min.js') }}" defer></script>
+    @stack('scripts')
   </body>
 </html>

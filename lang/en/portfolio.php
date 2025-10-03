@@ -1,0 +1,31 @@
+<?php
+
+return [
+    'port_desc' => 'Discover my portfolio showcasing web development projects, creative solutions, and applications I’ve built with passion and precision.',
+    'all_cat' => 'All Categories',
+    'web_templates' => 'Web Templates',
+    'projects' => 'Projects',
+    'ui_elements' => 'UI Elements',
+    'read_more' => 'Read More',
+    'project' => 'Project',
+    'web_template' => 'Web Template',
+    'ui_element' => 'UI Element',
+    'image' => 'Image',
+    'details' => 'Details',
+    'description' => 'Description',
+    'features' => 'Features',
+    'date' => 'Date',
+    'author' => 'Author',
+    'status' => 'Status',
+    'category' => 'Category',
+    'completed' => 'Completed',
+    'in_progress' => 'In Progress',
+    'canceled' => 'Canceled',
+    'all_portfolios' => 'All Portfolios',
+    'prev_portfolio' => 'Previous portfolio',
+    'next_portfolio' => 'Next portfolio',
+    'contact_me' => 'Contact Me',
+    'project_advertise_1' => 'Are you ready for a collaboration?',
+    'project_advertise_2' => "Let's work together!",
+
+];

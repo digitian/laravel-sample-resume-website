@@ -224,14 +224,14 @@
                     </div>
                 </li>
 
-                <!-- Comments -->
+                <!-- Reviews -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown" data-bs-auto-close="false" role="button" aria-expanded="false" >
                         <span class="nav-link-icon d-md-none d-lg-inline-block">
                             <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-message"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 9h8" /><path d="M8 13h6" /><path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z" /></svg>
                         </span>
                         <span class="nav-link-title">
-                        {{ __('admin.comments') }}
+                        {{ __('admin.reviews') }}
                         </span>
                     </a>
                     <div class="dropdown-menu">
@@ -241,7 +241,7 @@
                                 {{ __('admin.overview') }}
                                 </a>
                                 <a class="dropdown-item" href="{{ route('admin.comments.create') }}">
-                                {{ __('admin.add_comment') }}
+                                {{ __('admin.add_review') }}
                                 </a>
                             </div>
                         </div>
@@ -250,7 +250,7 @@
 
                 <!-- Messages -->
                 <li class="nav-item">
-                    <a class="nav-link" href=".{{ route('admin.messages.index') }}" >
+                    <a class="nav-link" href="{{ route('admin.messages.index') }}" >
                         <span class="nav-link-icon d-md-none d-lg-inline-block">
                             <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-mail"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" /><path d="M3 7l9 6l9 -6" /></svg>
                         </span>

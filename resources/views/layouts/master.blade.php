@@ -1,19 +1,45 @@
 <!doctype html>
-<html lang="zxx">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
-
-<!-- Mirrored from miller.bslthemes.com/arter-demo/home.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Sep 2025 18:59:08 GMT -->
 <head>
-  <!-- Required meta tags -->
+  <!-- Meta Tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/images/favicon/apple-touch-icon.png') }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/images/favicon/favicon-32x32.png') }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/images/favicon/favicon-16x16.png') }}">
+  <link rel="manifest" href="{{ asset('assets/images/favicon/site.webmanifest') }}">
+  @yield('seo')
+
   <!-- color of address bar in mobile browser -->
   <meta name="theme-color" content="#2B2B35">
   @vite(['resources/css/app.css', 'resources/js/app.js'])
-  <!-- favicon  -->
-  <link rel="shortcut icon" href="img/thumbnail.ico" type="image/x-icon">
 
-  <title>Arter</title>
+  <title>@yield('title', 'Hüseyin Emeci') - {{ __('main.website_title') }}</title>
+
+  <script type="application/ld+json">
+    {
+      "@@context": "https://schema.org",
+      "@@graph": [
+        {
+          "@@type": "Person",
+          "@@id": "https://huseyinemeci.com/#person",
+          "name": "Hüseyin Emeci",
+          "url": "https://huseyinemeci.com",
+          "image": "{{ asset('assets/images/huseyin-emeci.jpg') }}"
+        },
+        {
+          "@@type": "WebSite",
+          "@@id": "https://huseyinemeci.com/#website",
+          "url": "https://huseyinemeci.com",
+          "name": "Hüseyin Emeci",
+          "inLanguage": "tr-TR",
+          "publisher": { "@@id": "https://huseyinemeci.com/#person" }
+        }
+      ]
+    }
+  </script>
+  @yield('schema')
 </head>
 
 <body>
@@ -93,11 +119,15 @@
       let modifiedStyle = document.createElement('style');
       modifiedStyle.innerHTML = ".art-info-bar .art-header .art-avatar .art-lamp-light .art-available-lamp:after {content: '{{ __('main.freelance_available') }}';}";
       document.head.appendChild(modifiedStyle);
-    })
+
+      document.querySelectorAll('.art-ls-social a').forEach(a => {
+        a.setAttribute('data-no-swup', '');      // bypass swup
+        a.setAttribute('target', '_blank');      // open in new tab
+        a.setAttribute('rel', 'noopener noreferrer');
+      });
+    });
   </script>
 
 </body>
 
-
-<!-- Mirrored from miller.bslthemes.com/arter-demo/home.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Sep 2025 18:59:40 GMT -->
 </html>
