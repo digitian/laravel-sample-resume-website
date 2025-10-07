@@ -25,7 +25,8 @@ jobs:
           --exclude=".env" \
           --exclude="vendor" \
           --exclude="node_modules" \
-          --exclude="storage/app/public/uploads" \
+          --exclude="public/storage" \
+          --exclude="storage/app/public/**" \
           -e "ssh -o StrictHostKeyChecking=no" \
           ./ root@193.111.77.76:/var/www/html/huseyinemeci.com
 
@@ -33,14 +34,14 @@ jobs:
       run: ssh root@193.111.77.76 "cd /var/www/html/huseyinemeci.com && composer install --no-dev --optimize-autoloader"
 
     - name: ⚙️ Run Laravel Commands
-      run: ssh root@193.111.77.76 "cd /var/www/html/huseyinemeci.com && php artisan migrate --force && php artisan config:cache && php artisan route:cache && php artisan view:cache && php artisan storage:link && npm run build"
+      run: ssh root@193.111.77.76 "cd /var/www/html/huseyinemeci.com && php artisan migrate --force && php artisan config:cache && php artisan route:cache && php artisan view:cache && ([ -L public/storage ] || php artisan storage:link) && npm run build"
 
     - name: Fix permissions on server
       run: |
         ssh root@193.111.77.76 << 'EOF'
-          chown -R apache:apache /var/www/html/huseyinemeci.com/storage
-          chown -R apache:apache /var/www/html/huseyinemeci.com/bootstrap/cache
-          chmod -R 775 /var/www/html/huseyinemeci.com/storage
-          chmod -R 775 /var/www/html/huseyinemeci.com/bootstrap/cache
+          sudo chown -R apache:apache /var/www/html/huseyinemeci.com/storage
+          sudo chown -R apache:apache /var/www/html/huseyinemeci.com/bootstrap/cache
+          sudo chmod -R 775 /var/www/html/huseyinemeci.com/storage
+          sudo chmod -R 775 /var/www/html/huseyinemeci.com/bootstrap/cache
         EOF
         
