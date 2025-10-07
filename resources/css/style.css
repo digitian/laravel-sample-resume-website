@@ -2816,6 +2816,7 @@ html.is-animating .fade-left {
 .art-card.blog-card h5,
 .art-card.blog-card h6 {
   margin-bottom: 16px;
+  font-size: revert-layer;
 }
 
 .art-card b,
