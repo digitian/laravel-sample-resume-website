@@ -115,7 +115,7 @@
                           <div class="mb-3">
                             <label class="form-label" for="category_tr">{{ __('admin.category') }} ({{ __('main.turkish') }})</label>
                             <input type="text" class="form-control" id="category_tr" name="category_tr" placeholder="{{ __('admin.category') }} ({{ __('main.turkish') }})..." value="{{ $post_tr->category }}">
-
+                          </div>
                         </div>
 
                         <!-- English -->
