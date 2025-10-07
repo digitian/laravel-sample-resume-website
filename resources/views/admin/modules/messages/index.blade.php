@@ -31,10 +31,10 @@
 		class="table table-vcenter card-table">
                       <thead>
                         <tr>
-                          <th>Name</th>
-                          <th>Message</th>
-                          <th>Email</th>
-                          <th>Date</th>
+                          <th>{{ __('admin.name') }}</th>
+                          <th>{{ __('admin.message') }}</th>
+                          <th>{{ __('admin.email') }}</th>
+                          <th>{{ __('admin.date') }}</th>
                           <th class="w-1"></th>
                         </tr>
                       </thead>
@@ -70,7 +70,7 @@
                             </td>
                         </tr>
                         @empty
-                            <th colspan="5" class="text-center">Veri bulunamadı</th>
+                            <th colspan="5" class="text-center">{{ __('admin.no_data') }}</th>
                         @endforelse
                       </tbody>
                     </table>

@@ -1,0 +1,41 @@
+<?php
+
+return [
+
+    'i_am_huseyin' => "Merhaba, ben Hüseyin,",
+    'about_text_1' => 'Ege Üniversitesi Uluslararası İlişkiler bölümünde okudum. Bu eğitim bana insanlara ve sistemlere geniş bir bakış açısı kazandırdı. Daha sonra teknolojiye olan tutkumun peşinden giderek Anadolu Üniversitesi Bilgisayar Programcılığı bölümünde eğitimime devam ettim. Ayrıca Erasmus programı aracılığıyla Polonya’nın Varşova şehrinde bir dönem eğitim görme fırsatım oldu; bu deneyim bana uyum yeteneği kazandırdı ve farklı kültürlere kapı açtı.',
+    'about_text_2' => 'Bugün, kullanıcı dostu web siteleri ve dijital çözümler geliştiren bir web geliştirici olarak çalışıyorum. Deniz Web ve Mindlook gibi ajanslarla iş birliği yaptım; burada ekip çalışması, SEO ve performans optimizasyonu konularında değerli deneyimler kazandım. En çok heyecan duyduğum şey, yaratıcılığı ve problem çözmeyi birleştirerek fikirleri web üzerinde gerçeğe dönüştürmek.',
+    'about_text_3' => 'Ayrıca amatör bir müzisyenim. Gitar çalmayı ve şarkı söylemeyi severim. Bunun yanında spor yapmayı, doğa yürüyüşlerini, bisiklet sürmeyi ve seyahat etmeyi de çok severim.',
+    'education' => 'Eğitim',
+    'work_experience' => 'İş Deneyimi',
+    'ege_university' => 'Ege Üniversitesi',
+    'anadolu_university' => 'Anadolu Üniversitesi',
+    'bachelors_degree' => 'Lisans Diploması',
+    'associate_degree' => 'Ön Lisans Diploması',
+    'int_relations' => 'Uluslararası İlişkiler',
+    'computer_prog' => 'Bilgisayar Programcılığı',
+    'security_stud' => 'Güvenlik Çalışmaları',
+    'ege_desc' => 'Ege Üniversitesi Uluslararası İlişkiler bölümünden mezun oldum. Burada küresel bakış açısı ve analitik düşünme becerileri kazandım. Akademik geçmişim, karmaşık sistemleri anlama ve problem çözme yetenekleri geliştirmemi sağladı — bu becerileri şimdi web geliştirmede uyguluyorum.',
+    'anadolu_desc' => 'Şu anda Anadolu Üniversitesi Bilgisayar Programcılığı bölümünde eğitimime devam ediyorum. Yazılım ve web teknolojilerinde güçlü teknik beceriler geliştirmeye odaklanıyorum. Bu eğitim, programlama dilleri, veritabanları ve modern geliştirme araçları konusunda pratik bilgimi artırıyor. Akademik öğrenimi gerçek projelerle birleştirerek, web geliştirici olarak uzmanlığımı pekiştiriyorum.',
+    'akademia_sztuki_desc' => 'Erasmus programı aracılığıyla Polonya’nın Varşova kentindeki Akademia Sztuki Wojennej’de Güvenlik Çalışmaları bölümünde bir dönem eğitim gördüm. Bu deneyim, uluslararası bakış açımı genişletti ve farklı akademik ve kültürel ortamlarda etkileşim kurmamı sağladı. Ayrıca uyum sağlama ve ekip çalışması becerilerimi güçlendirdi; bu becerileri şimdi profesyonel web geliştirici olarak iş hayatımda kullanıyorum.',
+    'deniz_web' => 'Deniz Web Ajansı',
+    'mindlook_agency' => 'Mindlook Ajansı',
+    'remote_support' => 'Uzaktan Destek',
+    'deniz_web_desc' => 'Deniz Web Ajansı’nda Web Geliştirici olarak çalıştım. Çeşitli web siteleri ve CRM sistemlerinin hem frontend hem backend tarafına katkıda bulundum. Performans iyileştirmeleri yaptım, SEO stratejileri uyguladım ve müşterilerle yakın çalışarak ihtiyaçlarını verimli bir şekilde karşıladım. Şirketin bütçe kısıtlamaları nedeniyle ayrılmak zorunda kaldım, ancak bu deneyim teknik ve profesyonel becerilerimi önemli ölçüde geliştirdi.',
+    'mindlook_desc' => 'Mindlook Ajansı’nda web geliştirme alanında uzaktan destek sağladım. Hem frontend hem backend süreçlerine katkıda bulundum. Web portallarını kullanıcı deneyimini artıracak şekilde geliştirdim ve optimize ettim. Görünürlüğü artıran SEO stratejileri uyguladım ve yenilikçi dijital çözümleriyle tanınan dinamik bir startup ekibiyle iş birliği yaptım.',
+    'jan' => 'Oca',
+    'feb' => 'Şub',
+    'mar' => 'Mar',
+    'apr' => 'Nis',
+    'may' => 'May',
+    'jun' => 'Haz',
+    'jul' => 'Tem',
+    'aug' => 'Ağu',
+    'sep' => 'Eyl',
+    'oct' => 'Eki',
+    'nov' => 'Kas',
+    'dec' => 'Ara',
+
+    'about_desc' => 'Merhaba, ben Hüseyin Emeci. İzmirli bir web geliştiriciyim. Uluslararası İlişkiler ve Bilgisayar Programcılığı alanındaki eğitimimle, fikirleri hayata geçiren modern ve kullanıcı dostu web siteleri geliştiriyorum.',
+
+];

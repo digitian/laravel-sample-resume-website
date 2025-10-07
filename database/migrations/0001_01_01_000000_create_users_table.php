@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('password');
             $table->string('image')->default('assets/images/profile-placeholder.webp');
             $table->string('position')->nullable();
+            $table->enum('language', ['tr', 'en', 'de'])->default('tr');
             $table->rememberToken();
             $table->timestamps();
         });

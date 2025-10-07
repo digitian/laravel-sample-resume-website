@@ -11,7 +11,7 @@ class Portfolio extends Model
         'images' => 'array',
     ];
 
-    protected $fillable = ['author_id', 'title', 'description', 'content', 'features', 'images', 'category', 'locale','parent_id', 'slug', 'stage'];
+    protected $fillable = ['author_id', 'title', 'description', 'content', 'features', 'images', 'category', 'locale','parent_id', 'slug', 'stage', 'github_link', 'demo_link'];
 
     protected static function booted(): void
     {

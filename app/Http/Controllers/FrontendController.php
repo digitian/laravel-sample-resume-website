@@ -57,7 +57,7 @@ class FrontendController extends Controller
             ->select('slug')
             ->first();
 
-        $prevPostSlug = $prevPost->slug;
+        $prevPostSlug = $prevPost->slug ?? '';
 
         // Next (id just above current); if none, wrap to the lowest id (not current)
         $nextPost = Post::where('locale', $locale)
@@ -73,7 +73,7 @@ class FrontendController extends Controller
             ->select('slug')
             ->first();
 
-        $nextPostSlug = $nextPost->slug;
+        $nextPostSlug = $nextPost->slug ?? '';
         
         $postTr = Post::where('locale', 'tr')->where('parent_id', $post->parent_id)->first();
         $postTrSlug = $postTr->slug;
@@ -125,7 +125,7 @@ class FrontendController extends Controller
             ->select('slug')
             ->first();
 
-        $prevPortfolioSlug = $prevPortfolio->slug;
+        $prevPortfolioSlug = $prevPortfolio->slug ?? '';
 
         $nextPortfolio = Portfolio::where('locale', $locale)
             ->where('status', 1)
@@ -140,7 +140,7 @@ class FrontendController extends Controller
             ->select('slug')
             ->first();
 
-        $nextPortfolioSlug = $nextPortfolio->slug;
+        $nextPortfolioSlug = $nextPortfolio->slug ?? '';
 
         return view('portfolio-view', compact('portfolio', 'portfolioTrSlug', 'portfolioEnSlug', 'portfolioDeSlug', 'category', 'prevPortfolioSlug', 'nextPortfolioSlug'));
     }

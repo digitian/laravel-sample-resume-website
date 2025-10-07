@@ -4,6 +4,7 @@ return [
     'contact_desc' => 'Contact Hüseyin Emeci, web developer from İzmir. Reach out easily for projects, collaborations, or inquiries.',
     'contact_info' => 'Contact information',
     'get_in_touch' => 'Get in touch',
+    'phone' => 'Phone',
     'name' => 'Name',
     'email' => 'Email',
     'message' => 'Message',

@@ -91,6 +91,24 @@
                                         </select>
                                     </div>
 
+                                    <!-- Input: Github link -->
+                                    <div class="mb-3">
+                                        <label class="form-label" for="github_link">{{ __('admin.github_link') }}</label>
+                                        <input type="text" class="form-control" id="github_link"
+                                            name="github_link"
+                                            placeholder="{{ __('admin.github_link') }}..."
+                                            value="{{ old('github_link') }}">
+                                    </div>
+
+                                    <!-- Input: Demo link -->
+                                    <div class="mb-3">
+                                        <label class="form-label" for="demo_link">{{ __('admin.demo_link') }}</label>
+                                        <input type="text" class="form-control" id="demo_link"
+                                            name="demo_link"
+                                            placeholder="{{ __('admin.demo_link') }}..."
+                                            value="{{ old('demo_link') }}">
+                                    </div>
+
                                     <!-- Toggle: status -->
                                     <div class="mb-3">
                                         <label class="form-check form-switch">

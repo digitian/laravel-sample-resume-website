@@ -30,7 +30,7 @@
         </div>
         <!-- avatar end -->
         <!-- name -->
-        <h5 class="art-name mb-10"><a href="home.html">Hüseyin Emeci</a></h5>
+        <h5 class="art-name mb-10"><a href="{{ route(app()->getLocale() . '.home') }}">Hüseyin Emeci</a></h5>
         <!-- post -->
         <div class="art-sm-text">{{ __('main.job_definition') }}</div>
     </div>
@@ -42,7 +42,7 @@
         <!-- info bar about -->
         <div class="art-table p-15-15">
         <!-- about text -->
-        <ul>
+        <ul id="leftbar-info">
             <!-- country -->
             <li>
             <h6>{{ __('main.residence') }}:</h6><span>{{ __('main.turkey') }}</span>
@@ -69,7 +69,7 @@
         <div class="art-lang-skills-item">
             <div id="circleprog1" class="art-cirkle-progress"></div>
             <!-- title -->
-            <h6>{{ __('main.turkish') }}</h6>
+            <h6 id="leftbar-lang-1">{{ __('main.turkish') }}</h6>
         </div>
         <!-- skill end -->
 
@@ -77,7 +77,7 @@
         <div class="art-lang-skills-item">
             <div id="circleprog2" class="art-cirkle-progress"></div>
             <!-- title -->
-            <h6>{{ __('main.english') }}</h6>
+            <h6 id="leftbar-lang-2">{{ __('main.english') }}</h6>
         </div>
         <!-- skill end -->
 
@@ -85,7 +85,7 @@
         <div class="art-lang-skills-item">
             <div id="circleprog3" class="art-cirkle-progress"></div>
             <!-- title -->
-            <h6>{{ __('main.german') }}</h6>
+            <h6 id="leftbar-lang-3">{{ __('main.german') }}</h6>
         </div>
         <!-- skill end -->
 
@@ -162,7 +162,7 @@
         <div class="art-hard-skills-item">
             <div class="art-skill-heading">
             <!-- title -->
-            <h6>{{ __('main.server_management') }}</h6>
+            <h6 id="leftbar-text-1">{{ __('main.server_management') }}</h6>
             </div>
             <!-- progressbar frame -->
             <div class="art-line-progress">
@@ -180,7 +180,7 @@
         <div class="art-ls-divider"></div>
 
         <!-- knowledge list -->
-        <ul class="art-knowledge-list p-15-0">
+        <ul class="art-knowledge-list p-15-0" id="leftbar-text-2">
         <!-- list item -->
         <li>Bootstrap, Jquery</li>
         <!-- list item -->
@@ -189,6 +189,8 @@
         <li>Linux server, CPanel</li>
         <!-- list item -->
         <li>Git, CI/CD</li>
+        <!-- list item -->
+        <li>{{ __('main.ai_integration') }}</li>
         </ul>
         <!-- knowledge list end -->
 
@@ -199,7 +201,7 @@
         <div class="art-links-frame p-15-15">
 
         <!-- download cv button -->
-        <a href="{{ app()->getLocale() === 'tr' ? asset('assets/documents/huseyin-emeci-turkce-ozgecmis.pdf') : asset('assets/documents/huseyin-emeci-english-resume.pdf') }}" class="art-link" download data-no-swup>{{ __('main.download_cv') }} <i class="fas fa-download"></i></a>
+        <a href="{{ app()->getLocale() === 'tr' ? asset('assets/documents/huseyin-emeci-turkce-ozgecmis.pdf') : asset('assets/documents/huseyin-emeci-english-resume.pdf') }}" id="leftbar-text-3" class="art-link" download data-no-swup>{{ __('main.download_cv') }} <i class="fas fa-download"></i></a>
 
         </div>
         <!-- links frame end -->
@@ -210,15 +212,15 @@
     <!-- sidebar social -->
     <div class="art-ls-social">
         <!-- social link -->
-        <a href="https://www.linkedin.com/in/huseyin-emeci-731528197/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.linkedin.com/in/huseyin-emeci-731528197/" data-no-swup target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
         <!-- social link -->
-        <a href="https://github.com/digitian" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://github.com/digitian" data-no-swup target="_blank"><i class="fab fa-github" rel="noopener noreferrer"></i></a>
         <!-- social link -->
-        <a href="https://x.com/huseyinemeci" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://x.com/huseyinemeci" data-no-swup target="_blank"><i class="fab fa-twitter" rel="noopener noreferrer"></i></a>
         <!-- social link -->
-        <a href="https://www.facebook.com/emeci.huseyin" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.facebook.com/emeci.huseyin" data-no-swup target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
         <!-- social link -->
-        <a href="https://www.instagram.com/huseyinemeci/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.instagram.com/huseyinemeci/" data-no-swup target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
     </div>
     <!-- sidebar social end -->
 

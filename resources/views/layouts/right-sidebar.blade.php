@@ -43,11 +43,11 @@
         <!-- language change -->
         <ul class="art-language-change">
         <!-- language item -->
-        <li><a href="#.">DE</a></li>
+        <li id="lang_de_parent"><a href="" id="lang_de">DE</a></li>
         <!-- language item -->
-        <li><a href="#.">EN</a></li>
+        <li id="lang_en_parent"><a href="" id="lang_en">EN</a></li>
         <!-- language item -->
-        <li class="art-active-lang"><a href="#.">TR</a></li>
+        <li id="lang_tr_parent"><a href="" id="lang_tr">TR</a></li>
         </ul>
         <!-- language change end -->
 

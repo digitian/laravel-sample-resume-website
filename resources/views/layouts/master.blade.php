@@ -13,9 +13,15 @@
 
   <!-- color of address bar in mobile browser -->
   <meta name="theme-color" content="#2B2B35">
-  @vite(['resources/css/app.css', 'resources/js/app.js'])
+  @vite(['resources/css/app.css'])
 
   <title>@yield('title', 'Hüseyin Emeci') - {{ __('main.website_title') }}</title>
+
+  <style>
+    .art-info-bar .art-header .art-avatar .art-lamp-light .art-available-lamp:after {
+      content: "{{ __('main.freelance_available') }}" !important;
+    }
+  </style>
 
   <script type="application/ld+json">
     {
@@ -40,6 +46,7 @@
     }
   </script>
   @yield('schema')
+  {!! RecaptchaV3::initJs() !!}
 </head>
 
 <body>
@@ -102,31 +109,16 @@
   <script src="{{ asset('assets/js/smooth-scrollbar.min.js') }}"></script>
   <!-- overscroll js -->
   <script src="{{ asset('assets/js/overscroll.min.js') }}"></script>
-  <!-- typing js -->
-  <script src="{{ asset('assets/js/typing.min.js') }}"></script>
   <!-- isotope js -->
   <script src="{{ asset('assets/js/isotope.min.js') }}"></script>
   <!-- fancybox js -->
   <script src="{{ asset('assets/js/fancybox.min.js') }}"></script>
   <!-- swup js -->
   <script src="{{ asset('assets/js/swup.min.js') }}"></script>
-
+  <!-- swup head js -->
+  <script src="{{ asset('assets/js/swup-head.js') }}"></script>
   <!-- main js -->
   <script src="{{ asset('assets/js/main.js') }}"></script>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      let modifiedStyle = document.createElement('style');
-      modifiedStyle.innerHTML = ".art-info-bar .art-header .art-avatar .art-lamp-light .art-available-lamp:after {content: '{{ __('main.freelance_available') }}';}";
-      document.head.appendChild(modifiedStyle);
-
-      document.querySelectorAll('.art-ls-social a').forEach(a => {
-        a.setAttribute('data-no-swup', '');      // bypass swup
-        a.setAttribute('target', '_blank');      // open in new tab
-        a.setAttribute('rel', 'noopener noreferrer');
-      });
-    });
-  </script>
 
 </body>
 

@@ -1,0 +1,41 @@
+<?php
+
+return [
+
+    'i_am_huseyin' => "Hallo, ich bin Hüseyin,",
+    'about_text_1' => 'Ich habe Internationale Beziehungen an der Ege Universität studiert, was mir eine breite Perspektive auf Menschen und Systeme vermittelte. Später setzte ich mein Studium an der Anadolu Universität im Fach Computerprogrammierung fort, um meiner Leidenschaft für Technologie zu folgen. Außerdem verbrachte ich ein Semester in Warschau, Polen, im Rahmen des Erasmus-Programms – eine Erfahrung, die mir Anpassungsfähigkeit lehrte und mir neue Kulturen eröffnete.',
+    'about_text_2' => 'Heute arbeite ich als Webentwickler und entwickle benutzerfreundliche Websites und digitale Lösungen. Ich habe mit Agenturen wie Deniz Web und Mindlook zusammengearbeitet und dabei wertvolle Erfahrungen in Teamarbeit, SEO und Leistungsoptimierung gesammelt. Am meisten begeistert mich, Kreativität und Problemlösung zu kombinieren, um Ideen im Web in die Realität umzusetzen.',
+    'about_text_3' => 'Ich bin auch Hobbymusiker – ich spiele gerne Gitarre und singe. Außerdem mag ich Fitness, Wandern, Radfahren und Reisen.',
+    'education' => 'Ausbildung',
+    'work_experience' => 'Berufserfahrung',
+    'ege_university' => 'Ege Universität',
+    'anadolu_university' => 'Anadolu Universität',
+    'bachelors_degree' => 'Bachelorabschluss',
+    'associate_degree' => 'Associate Degree',
+    'int_relations' => 'Internationale Beziehungen',
+    'computer_prog' => 'Computerprogrammierung',
+    'security_stud' => 'Sicherheitsstudien',
+    'ege_desc' => 'Ich habe meinen Abschluss in Internationalen Beziehungen an der Ege Universität gemacht, wo ich ein starkes Fundament in globalen Perspektiven und analytischem Denken erwarb. Mein akademischer Hintergrund hat mir geholfen, Problemlösungsfähigkeiten und das Verständnis komplexer Systeme zu entwickeln – Fähigkeiten, die ich jetzt in der Webentwicklung anwende.',
+    'anadolu_desc' => 'Derzeit studiere ich Computerprogrammierung an der Anadolu Universität, wo ich mich auf den Aufbau technischer Fähigkeiten in Software- und Webtechnologien konzentriere. Dieses Studium erweitert mein praktisches Wissen über Programmiersprachen, Datenbanken und moderne Entwicklungstools. Durch die Kombination von akademischem Lernen und realen Projekten stärke ich kontinuierlich meine Fachkenntnisse als Webentwickler.',
+    'akademia_sztuki_desc' => 'Im Rahmen des Erasmus-Programms hatte ich die Gelegenheit, ein Semester an der Akademia Sztuki Wojennej in Warschau, Polen, im Bereich Sicherheitsstudien zu studieren. Diese Erfahrung erweiterte meine internationale Perspektive und ermöglichte es mir, mich mit vielfältigen akademischen und kulturellen Umgebungen auseinanderzusetzen. Sie stärkte auch meine Anpassungs- und Teamfähigkeiten, die ich heute in meiner Arbeit als Webentwickler einsetze.',
+    'deniz_web' => 'Deniz Web Agentur',
+    'mindlook_agency' => 'Mindlook Agentur',
+    'remote_support' => 'Remote-Unterstützung',
+    'deniz_web_desc' => 'Bei der Deniz Web Agentur arbeitete ich als Webentwickler und trug sowohl zum Frontend- als auch zum Backend-Teil verschiedener Websites und CRM-Systeme bei. Ich verbesserte die Leistung, implementierte SEO-Strategien und arbeitete eng mit Kunden zusammen, um ihre Anforderungen effizient zu erfüllen. Aufgrund von Budgeteinschränkungen im Unternehmen musste ich die Agentur verlassen, aber die Erfahrung hat meine technischen und beruflichen Fähigkeiten erheblich gestärkt.',
+    'mindlook_desc' => 'Bei der Mindlook Agentur bot ich Remote-Unterstützung in der Webentwicklung und arbeitete an Frontend- und Backend-Prozessen. Ich entwickelte und optimierte Webportale, um die Benutzerfreundlichkeit zu verbessern, implementierte SEO-Strategien zur Steigerung der Sichtbarkeit und arbeitete mit einem dynamischen Startup-Team zusammen, das für innovative digitale Lösungen bekannt ist.',
+    'jan' => 'Jan',
+    'feb' => 'Feb',
+    'mar' => 'Mär',
+    'apr' => 'Apr',
+    'may' => 'Mai',
+    'jun' => 'Jun',
+    'jul' => 'Jul',
+    'aug' => 'Aug',
+    'sep' => 'Sep',
+    'oct' => 'Okt',
+    'nov' => 'Nov',
+    'dec' => 'Dez',
+
+    'about_desc' => 'Hallo, ich bin Hüseyin Emeci, ein Webentwickler aus Izmir. Mit einem Hintergrund in Internationalen Beziehungen und Computerprogrammierung entwickle ich moderne, benutzerfreundliche Websites, die Ideen zum Leben erwecken.',
+
+];

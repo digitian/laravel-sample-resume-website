@@ -157,8 +157,6 @@
                                             </div>
                                         </div>
                                         <p>{{ __('about.akademia_sztuki_desc') }}</p>
-                                        <a data-fancybox="diplome" data-no-swup href="files/certificate.jpg"
-                                            class="art-link art-color-link art-w-chevron">Licence</a>
                                     </div>
 
                                 </div>

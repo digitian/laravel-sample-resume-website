@@ -35,13 +35,13 @@ class PortfolioController extends Controller
     {
         $request->validate([
             'title_tr' => ['required', 'string', 'max: 255'],
-            'content_tr' => ['required', 'string', 'max: 500'],
+            'content_tr' => ['required', 'string', 'max: 3000'],
             'description_tr' => ['required', 'string', 'max: 500'],
             'title_en' => ['required', 'string', 'max: 255'],
-            'content_en' => ['required', 'string', 'max: 500'],
+            'content_en' => ['required', 'string', 'max: 3000'],
             'description_en' => ['required', 'string', 'max: 500'],
             'title_de' => ['required', 'string', 'max: 255'],
-            'content_de' => ['required', 'string', 'max: 500'],
+            'content_de' => ['required', 'string', 'max: 3000'],
             'description_de' => ['required', 'string', 'max: 500'],
             'images'     => ['required','array','min:1','max:20'],
             'images.*'   => ['file','mimes:jpg,jpeg,png,webp,avif,gif','max:5120'],
@@ -53,6 +53,8 @@ class PortfolioController extends Controller
             'features_de.*' => ['string','min:1','max:200','distinct:ignore_case'],
             'category' => ['required', 'in:project,web-template,ui'],
             'stage' => ['required', 'in:inprogress,completed,canceled'],
+            'github_link' => ['nullable', 'string', 'max: 255'],
+            'demo_link' => ['nullable', 'string', 'max: 255'],
             'status' =>  ['boolean'],
         ]);
 
@@ -70,6 +72,8 @@ class PortfolioController extends Controller
             'slug' => \Str::slug($request->title_tr),
             'images' => $paths,
             'stage' => $request->stage,
+            'github_link' => $request->github_link,
+            'demo_link' => $request->demo_link,
             'category' => $request->category,
             'status' => $request->status ? 1 : 0,
             'locale' => 'tr',
@@ -84,6 +88,8 @@ class PortfolioController extends Controller
             'slug' => \Str::slug($request->title_en),
             'images' => $paths,
             'stage' => $request->stage,
+            'github_link' => $request->github_link,
+            'demo_link' => $request->demo_link,
             'category' => $request->category,
             'status' => $request->status ? 1 : 0,
             'parent_id' => $basePortfolio->id,
@@ -99,6 +105,8 @@ class PortfolioController extends Controller
             'slug' => \Str::slug($request->title_de),
             'images' => $paths,
             'stage' => $request->stage,
+            'github_link' => $request->github_link,
+            'demo_link' => $request->demo_link,
             'category' => $request->category,
             'status' => $request->status ? 1 : 0,
             'parent_id' => $basePortfolio->id,
@@ -138,13 +146,13 @@ class PortfolioController extends Controller
     {
         $request->validate([
             'title_tr' => ['required', 'string', 'max: 255'],
-            'content_tr' => ['required', 'string', 'max: 500'],
+            'content_tr' => ['required', 'string', 'max: 3000'],
             'description_tr' => ['required', 'string', 'max: 500'],
             'title_en' => ['required', 'string', 'max: 255'],
-            'content_en' => ['required', 'string', 'max: 500'],
+            'content_en' => ['required', 'string', 'max: 3000'],
             'description_en' => ['required', 'string', 'max: 500'],
             'title_de' => ['required', 'string', 'max: 255'],
-            'content_de' => ['required', 'string', 'max: 500'],
+            'content_de' => ['required', 'string', 'max: 3000'],
             'description_de' => ['required', 'string', 'max: 500'],
             // 'images'     => ['array','min:1','max:20'],
             // 'images.*'   => ['file','mimes:jpg,jpeg,png,webp,avif,gif','max:5120'],
@@ -156,6 +164,8 @@ class PortfolioController extends Controller
             'features_de.*' => ['string','min:1','max:200','distinct:ignore_case'],
             'stage' => ['required', 'in:inprogress,completed,canceled'],
             'category' => ['required', 'in:project,web-template,ui'],
+            'github_link' => ['nullable', 'string', 'max: 255'],
+            'demo_link' => ['nullable', 'string', 'max: 255'],
             'status' =>  ['boolean'],
         ]);
 
@@ -166,6 +176,8 @@ class PortfolioController extends Controller
         $portfolio_tr->description = $request->description_tr;
         $portfolio_tr->features = $request->features_tr;
         $portfolio_tr->stage = $request->stage;
+        $portfolio_tr->demo_link = $request->demo_link;
+        $portfolio_tr->github_link = $request->github_link;
         $portfolio_tr->category = $request->category;
         $portfolio_tr->status = $request->status ? 1 : 0;
         $portfolio_tr->save();
@@ -176,6 +188,8 @@ class PortfolioController extends Controller
         $portfolio_en->description = $request->description_en;
         $portfolio_en->features = $request->features_en;
         $portfolio_en->stage = $request->stage;
+        $portfolio_en->demo_link = $request->demo_link;
+        $portfolio_en->github_link = $request->github_link;
         $portfolio_en->category = $request->category;
         $portfolio_en->status = $request->status ? 1 : 0;
         $portfolio_en->save();
@@ -186,6 +200,8 @@ class PortfolioController extends Controller
         $portfolio_de->description = $request->description_de;
         $portfolio_de->features = $request->features_de;
         $portfolio_de->stage = $request->stage;
+        $portfolio_de->demo_link = $request->demo_link;
+        $portfolio_de->github_link = $request->github_link;
         $portfolio_de->category = $request->category;
         $portfolio_de->status = $request->status ? 1 : 0;
         $portfolio_de->save();

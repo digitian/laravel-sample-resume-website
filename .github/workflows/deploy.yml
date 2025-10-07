@@ -1,0 +1,46 @@
+name: 🚀 Deploy Laravel App to VPS
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 📦 Checkout code
+      uses: actions/checkout@v4
+
+    - name: 🔐 Setup SSH
+      uses: webfactory/ssh-agent@v0.9.0
+      with:
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+        log-public-key: true
+
+    - name: 🛰️ Deploy with rsync
+      run: |
+        rsync -avz --delete \
+          --exclude=".env" \
+          --exclude="vendor" \
+          --exclude="node_modules" \
+          --exclude="storage/app/public/uploads" \
+          -e "ssh -o StrictHostKeyChecking=no" \
+          ./ root@193.111.77.76:/var/www/html/huseyinemeci.com
+
+    - name: 📦 Install Composer Dependencies
+      run: ssh root@193.111.77.76 "cd /var/www/html/huseyinemeci.com && composer install --no-dev --optimize-autoloader"
+
+    - name: ⚙️ Run Laravel Commands
+      run: ssh root@193.111.77.76 "cd /var/www/html/huseyinemeci.com && php artisan migrate:fresh --seed && php artisan config:cache && php artisan route:cache && php artisan view:cache && php artisan storage:link"
+
+    - name: Fix permissions on server
+      run: |
+        ssh root@193.111.77.76 << 'EOF'
+          chown -R apache:apache /var/www/html/huseyinemeci.com/storage
+          chown -R apache:apache /var/www/html/huseyinemeci.com/bootstrap/cache
+          chmod -R 775 /var/www/html/huseyinemeci.com/storage
+          chmod -R 775 /var/www/html/huseyinemeci.com/bootstrap/cache
+        EOF
+        

@@ -43,9 +43,9 @@
 		class="table table-vcenter card-table">
                       <thead>
                         <tr>
-                          <th>Title</th>
-                          <th>Date</th>
-                          <th>Status</th>
+                          <th>{{ __('admin.title') }}</th>
+                          <th>{{ __('admin.date') }}</th>
+                          <th>{{ __('admin.status') }}</th>
                           <th class="w-1"></th>
                         </tr>
                       </thead>
@@ -88,7 +88,7 @@
                             </td>
                         </tr>
                         @empty
-                            <th colspan="5" class="text-center">Veri bulunamadı</th>
+                            <th colspan="5" class="text-center">{{ __('admin.no_data') }}</th>
                         @endforelse
                       </tbody>
                     </table>

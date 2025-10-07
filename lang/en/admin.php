@@ -1,7 +1,8 @@
 <?php
 
 return [
-    'login_pagetitle' => 'Yönetim Paneli Girişi', 
+    'login_pagetitle' => 'Login - Admin Panel',
+    'admin_panel' => 'Admin Panel',
     'login_to_acc' => 'Login to your account',
     'email_address' => 'Email address',
     'your_email' => 'Your email address',
@@ -17,6 +18,7 @@ return [
     'enable_dark' => 'Enable dark mode',
     'enable_light' => 'Enable light mode',
     'notifications' => 'Notifications',
+    'search' => 'Search',
     'home' => 'Home',
     'portfolio' => 'Portfolio',
     'services' => 'Services',
@@ -40,6 +42,9 @@ return [
 
     'are_you_sure' => 'Are you sure?',
 
+    'no_data' => 'No data',
+    'date' => 'Date',
+    'email' => 'E-Mail',
     'edit' => 'Edit',
     'delete' => 'Delete',
     'title' => 'Title',
@@ -48,6 +53,8 @@ return [
     'status' => 'Status',
     'keywords' => 'Keywords',
     'category' => 'Category',
+    'github_link' => 'Github Link',
+    'demo_link' => 'Demo Link',
     'create_service' => 'Create Service',
     'edit_service' => 'Edit Service',
     'save_service' => 'Save Service',
@@ -65,11 +72,42 @@ return [
     'canceled' => 'Canceled',
     'edit_portfolio' => 'Edit Portfolio',
     'save_portfolio' => 'Save Portfolio',
-
     'create_portfolio' => 'Create Portfolio',
+
     'create_post' => 'Create Post',
     'edit_post' => 'Edit Post',
     'save_post' => 'Save Post',
     'upload_cover_img' => 'Upload a Cover Image',
+
+    'message' => 'Message',
+
+    'account_settings' => 'Account Settings',
+    'my_acc' => 'My Account',
+    'contact_info' => 'Contact Info',
+    'general' => 'General',
+    'development' => 'Development',
+    'give_feedback' => 'Give Feedback',
+    'profile_details' => 'Profile Details',
+    'change_avatar' => 'Change Avatar',
+    'delete_avatar' => 'Delete Avatar',
+    'avatar_change_success' => 'Your profile photo has been updated successfully.',
+    'name' => 'Name',
+    'change' => 'Change',
+    'name_desc' => 'This name will be shown to others publicly.',
+    'name_change_success' => 'You name has been updated successfully.',
+    'password_desc' => 'You can set a different password. You should change your password once in 6 months to maximize your security.',
+    'set_new_pw' => 'Set new password',
+    'current_password' => 'Current password',
+    'new_password' => 'New password',
+    'confirm_new_password' => 'Confirm new password',
+    'update_password' => 'Update Password',
+    'password_update_success' => 'Your password has been updated successfully.',
+    'password_info' => 'Your password must contain at least 8 characters.',
+    'language' => 'Language',
+    'language_desc' => 'You can customize the language of the dashboard. Your preferences will be saved.',
+    'turkish' => 'Turkish',
+    'english' => 'English',
+    'german' => 'German',
+    'language_change_success' => 'Your language preferences has been changed successfully.',
 
 ];

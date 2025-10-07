@@ -41,20 +41,20 @@
                   <div class="card-body">
                     <div class="row gy-3">
                       <div class="col-md-4">
-                        <div class="fw-bold">Name</div>
+                        <div class="fw-bold">{{ __('admin.name') }}</div>
                         <div class="text-muted">{{ $message->name }}</div>
                       </div>
                       <div class="col-md-4">
-                        <div class="fw-bold">E-Mail</div>
+                        <div class="fw-bold">{{ __('admin.email') }}</div>
                         <div class="text-muted">{{ $message->email }}</div>
                       </div>
                       <div class="col-md-4">
-                        <div class="fw-bold">Date</div>
+                        <div class="fw-bold">{{ __('admin.date') }}</div>
                         <div class="text-muted">{{ $message->created_at->translatedFormat('j M Y G:i:s') }}</div>
                       </div>
                       <hr class="my-3" />
                       <div class="col-12">
-                        <div class="fw-bold">Message</div>
+                        <div class="fw-bold">{{ __('admin.message') }}</div>
                         <div class="text-muted">{{ $message->message }}</div>
                       </div>
                     </div>

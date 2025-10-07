@@ -249,6 +249,16 @@
                                         <li>
                                             <h6>{{ __('portfolio.author') }}:</h6><span>Hüseyin Emeci</span>
                                         </li>
+                                        @if ($portfolio->github_link)
+                                            <li>
+                                                <h6>Github:</h6><span><a href="{{ $portfolio->github_link }}" target="_blank" data-no-swup><i class="fab fa-github mr-1"></i>github</a></span>
+                                            </li>
+                                        @endif
+                                        @if ($portfolio->demo_link)
+                                            <li>
+                                                <h6>Demo:</h6><span><a href="{{ $portfolio->demo_link }}" target="_blank" data-no-swup><i class="fas fa-link mr-1"></i>demo</a></span>
+                                            </li>
+                                        @endif
                                     </ul>
                                 </div>
                                 <!-- table end -->
@@ -299,13 +309,20 @@
                             <!-- projects navigation -->
                             <div class="art-a art-pagination">
                                 <!-- button -->
-                                <a href="{{ route(app()->getLocale() . '.portfolio.view', $prevPortfolioSlug) }}"
-                                    class="art-link art-color-link art-w-chevron art-left-link"><span>{{ __('portfolio.prev_portfolio') }}</span></a>
+                                @if ($prevPortfolioSlug !== '')
+                                    <a href="{{ route(app()->getLocale() . '.portfolio.view', $prevPortfolioSlug) }}" class="art-link art-color-link art-w-chevron art-left-link"><span>{{ __('portfolio.prev_portfolio') }}</span></a>
+                                @else
+                                    <a href="javascript:;" class="art-link art-w-chevron art-left-link"><span>{{ __('portfolio.prev_portfolio') }}</span></a>
+                                @endif
                                 <div class="art-pagination-center art-m-hidden">
                                     <a class="art-link" href="{{ route(app()->getLocale() . '.portfolio') }}">{{ __('portfolio.all_portfolios') }}</a>
                                 </div>
                                 <!-- button -->
-                                <a href="{{ route(app()->getLocale() . '.portfolio.view', $nextPortfolioSlug) }}" class="art-link art-color-link art-w-chevron"><span>{{ __('portfolio.next_portfolio') }}</span></a>
+                                @if ($nextPortfolioSlug !== '')
+                                    <a href="{{ route(app()->getLocale() . '.portfolio.view', $nextPortfolioSlug) }}" class="art-link art-color-link art-w-chevron"><span>{{ __('portfolio.next_portfolio') }}</span></a>
+                                @else
+                                    <a href="javascript:;" class="art-link art-w-chevron"><span>{{ __('portfolio.next_portfolio') }}</span></a>
+                                @endif
                             </div>
                             <!-- projects navigation end -->
 

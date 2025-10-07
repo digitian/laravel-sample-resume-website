@@ -1551,7 +1551,7 @@ content
   position: relative;
   -webkit-box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
           box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
-  z-index: 999; }
+   }
   /* line 55, ../scss/_content.scss */
   .art-banner .art-banner-overlay {
     position: relative;
@@ -2562,7 +2562,7 @@ content (after 920px)
       /* line 1063, ../scss/_content.scss */
       .art-banner .art-banner-overlay .art-banner-title h1 {
         color: #fafafc;
-        font-size: 46px; }
+        font-size: 32px; }
       /* line 1068, ../scss/_content.scss */
       .art-banner .art-banner-overlay .art-banner-title .art-buttons-frame {
         text-align: center;
@@ -2799,3 +2799,7 @@ html.is-animating .fade-left {
     -webkit-transform: scale(1);
             transform: scale(1); } }
 /*# sourceMappingURL=style.css.map */
+
+.art-table ul li h6 i {
+  width: 20px;
+}

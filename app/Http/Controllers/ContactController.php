@@ -12,6 +12,8 @@ class ContactController extends Controller
             'name' => ['required', 'string', 'max: 100'],
             'email' => ['required', 'string', 'max: 150'],
             'message' => ['required', 'string', 'max: 1000'],
+            // reCAPTCHA v3: required + action + min score (0.5 default)
+            'g-recaptcha-response' => ['required', 'recaptchav3:contact,0.5'],
         ]);
 
         $message = Message::create([

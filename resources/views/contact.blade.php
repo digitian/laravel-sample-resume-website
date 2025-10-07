@@ -94,10 +94,19 @@
                       <div class="art-table p-15-15">
                         <ul>
                           <li>
-                            <h6>{{ __('main.residence') }}:</h6><span>{{ __('main.turkey') }}</span>
+                            <h6><i class="fas fa-map-marker-alt"></i>{{ __('main.residence') }}:</h6><span>{{ __('main.turkey') }}</span>
                           </li>
                           <li>
-                            <h6>{{ __('main.city') }}:</h6><span>{{ __('main.izmir') }}</span>
+                            <h6><i class="fas fa-city"></i>{{ __('main.city') }}:</h6><span><a href="https://maps.app.goo.gl/wXCu5QhR2rrvcqGZ8" target="_blank" data-no-swup>{{ __('main.izmir') }}</a></span>
+                          </li>
+                          <li>
+                            <h6><i class="far fa-envelope"></i>{{ __('contact.email') }}:</h6><span><a href="mailto:huseyinemeci@gmail.com">huseyinemeci@gmail.com</a></span>
+                          </li>
+                          <li>
+                            <h6><i class="fas fa-phone"></i>{{ __('contact.phone') }}</h6><span><a href="tel:+905517307091">+905517307091</a></span>
+                          </li>
+                          <li>
+                            <h6><i class="fab fa-whatsapp"></i>WhatsApp:</h6><span><a href="https://wa.me/905517307091" target="_blank" data-no-swup>+905517307091</a></span>
                           </li>
                         </ul>
                       </div>
@@ -112,13 +121,19 @@
                       <div class="art-table p-15-15">
                         <ul>
                           <li>
-                            <h6>Email:</h6><span>huseyinemeci@gmail.com</span>
+                            <h6><i class="fab fa-linkedin"></i>Linkedin:</h6><span><a href="https://www.linkedin.com/in/huseyin-emeci-731528197/" target="_blank" data-no-swup>Hüseyin Emeci</a></span>
                           </li>
                           <li>
-                            <h6>Telegram:</h6><span>@arter</span>
+                            <h6><i class="fab fa-github-square"></i>Github:</h6><span><a href="https://github.com/digitian" target="_blank" data-no-swup>@digitian</a></span>
                           </li>
                           <li>
-                            <h6>Skype:</h6><span>Arter</span>
+                            <h6><i class="fab fa-twitter"></i>X:</h6><span><a href="https://x.com/huseyinemeci" target="_blank" data-no-swup>@huseyinemeci</a></span>
+                          </li>
+                          <li>
+                            <h6><i class="fab fa-facebook-square"></i>Facebook:</h6><span><a href="https://www.facebook.com/emeci.huseyin" target="_blank" data-no-swup>@emeci.huseyin</a></span>
+                          </li>
+                          <li>
+                            <h6><i class="fab fa-instagram"></i>Instagram:</h6><span><a href="https://www.instagram.com/huseyinemeci/" target="_blank" data-no-swup>@huseyinemeci</a></span>
                           </li>
                         </ul>
                       </div>
@@ -170,6 +185,7 @@
                           <!-- label -->
                           <label for="message"><i class="far fa-envelope"></i></label>
                         </div>
+                        {!! RecaptchaV3::field('contact') !!}
                         <!-- form field end -->
                         <!-- button -->
                         <div class="art-submit-frame">

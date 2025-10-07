@@ -9,7 +9,12 @@ use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SitemapController;
 use Illuminate\Support\Facades\Route;
+
+// Sitemap
+
+route::get('sitemap.xml', [SitemapController::class, 'show'])->name('sitemap')->middleware('cache.headers:public;max_age=3600;etag');
 
 Route::middleware('language_guard')->as('tr.')->group(function () {
     Route::get('/', [FrontendController::class, 'index'])->name('home');
@@ -43,8 +48,9 @@ Route::middleware('language_guard')->prefix('de')->as('de.')->group(function () 
 
 Route::post('send-message', [ContactController::class, 'sendMessage'])->name('contact.message.send');
 
-Route::middleware(['auth', 'role:admin'])->as('admin.')->prefix('admin')->group(function () {
+Route::middleware(['auth', 'role:admin', 'admin.language'])->as('admin.')->prefix('admin')->group(function () {
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('settings', [DashboardController::class, 'settings'])->name('settings');
     Route::resource('blog', BlogController::class);
     Route::resource('portfolio', PortfolioController::class);
     Route::resource('services', ServiceController::class);
@@ -52,6 +58,12 @@ Route::middleware(['auth', 'role:admin'])->as('admin.')->prefix('admin')->group(
     Route::get('messages', [MessageController::class, 'index'])->name('messages.index');
     Route::get('messages/view/{message}', [MessageController::class, 'viewMessage'])->name('message.view');
     Route::delete('messages/destroy/{message}', [MessageController::class, 'destroyMessage'])->name('message.destroy');
+
+    Route::put('settings/avatar-upload', [DashboardController::class, 'avatarChange'])->name('settings.avatar.upload');
+    Route::put('settings/avatar-delete', [DashboardController::class, 'avatarDestroy'])->name('settings.avatar.destroy');
+    Route::put('settings/name-change', [DashboardController::class, 'nameChange'])->name('settings.name.change');
+    Route::put('settings/password-update', [DashboardController::class, 'updatePassword'])->name('settings.password.update');
+    Route::put('settings/language-update', [DashboardController::class, 'updateLanguage'])->name('settings.language.update');
 
 });
 

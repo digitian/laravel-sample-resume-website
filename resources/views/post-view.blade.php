@@ -175,12 +175,20 @@
                     <!-- pagination -->
                     <div class="art-a art-pagination">
                       <!-- button -->
-                      <a href="{{ route(app()->getLocale() . '.blog.view', $prevPostSlug) }}" class="art-link art-color-link art-w-chevron art-left-link"><span>{{ __('blog.prev_post') }}</span></a>
+                      @if ($prevPostSlug !== '')
+                        <a href="{{ route(app()->getLocale() . '.blog.view', $prevPostSlug) }}" class="art-link art-color-link art-w-chevron art-left-link"><span>{{ __('blog.prev_post') }}</span></a>
+                      @else
+                        <a href="javascript:;" class="art-link art-w-chevron art-left-link"><span>{{ __('blog.prev_post') }}</span></a>
+                      @endif
                       <div class="art-pagination-center art-m-hidden">
                         <a class="art-link" href="{{ route(app()->getLocale() . '.blog') }}">{{ __('blog.all_pub') }}</a>
                       </div>
                       <!-- button -->
-                      <a href="{{ route(app()->getLocale() . '.blog.view', $nextPostSlug) }}" class="art-link art-color-link art-w-chevron"><span>{{ __('blog.next_post') }}</span></a>
+                      @if ($nextPostSlug !== '')
+                        <a href="{{ route(app()->getLocale() . '.blog.view', $nextPostSlug) }}" class="art-link art-color-link art-w-chevron"><span>{{ __('blog.next_post') }}</span></a>
+                      @else
+                        <a href="javascript:;" class="art-link art-w-chevron"><span>{{ __('blog.next_post') }}</span></a>
+                      @endif
                     </div>
                     <!-- pagination end -->
 

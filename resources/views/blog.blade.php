@@ -115,7 +115,7 @@
                             <!-- post description -->
                             <div class="art-post-description">
                             <!-- title -->
-                            <a href="blog-post.html">
+                            <a href="{{ route(app()->getLocale() . '.blog.view', $post->slug) }}">
                                 <h5 class="mb-15">{{ $post->title }}</h5>
                             </a>
                             <!-- text -->
