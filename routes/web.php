@@ -48,13 +48,13 @@ Route::middleware('language_guard')->prefix('de')->as('de.')->group(function () 
     Route::get('portfolio/{slug}', [FrontendController::class, 'viewportfolio'])->name('portfolio.view');
 });
 
-RateLimiter::for('send-message', fn($request) =>
-    [Limit::perMinute(2)->by($request->ip()),
-     Limit::perHour(5)->by($request->ip())]
+RateLimiter::for('contact', fn($request) =>
+    [Limit::perMinute(3)->by($request->ip()),
+     Limit::perHour(20)->by($request->ip())]
 );
 
 Route::post('send-message', [ContactController::class, 'sendMessage'])->name('contact.message.send')
-->middleware('throttle:send-message');
+->middleware('throttle:contact');
 
 Route::middleware(['auth', 'role:admin', 'admin.language'])->as('admin.')->prefix('admin')->group(function () {
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
