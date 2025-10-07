@@ -23,6 +23,16 @@
     }
   </style>
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EH3K01747B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-EH3K01747B');
+  </script>
+
   <script type="application/ld+json">
     {
       "@@context": "https://schema.org",

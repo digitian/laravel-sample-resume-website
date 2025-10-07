@@ -33,7 +33,7 @@ jobs:
       run: ssh root@193.111.77.76 "cd /var/www/html/huseyinemeci.com && composer install --no-dev --optimize-autoloader"
 
     - name: ⚙️ Run Laravel Commands
-      run: ssh root@193.111.77.76 "cd /var/www/html/huseyinemeci.com && php artisan migrate --force && php artisan config:cache && php artisan route:cache && php artisan view:cache && php artisan storage:link"
+      run: ssh root@193.111.77.76 "cd /var/www/html/huseyinemeci.com && php artisan migrate --force && php artisan config:cache && php artisan route:cache && php artisan view:cache && php artisan storage:link && npm run build"
 
     - name: Fix permissions on server
       run: |
