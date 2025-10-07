@@ -10,4 +10,5 @@ return [
     'message' => 'Message',
     'send_message' => 'Send Message',
     'success' => 'Message has been sent successfully. I will respond as soon as possible!',
+    'contact_error_1' => 'Please do not fill the form fast. This might be counted as a suspicious activity.',
 ];

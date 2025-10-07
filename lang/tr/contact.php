@@ -10,4 +10,5 @@ return [
     'message' => 'Mesaj',
     'send_message' => 'Mesaj Gönder',
     'success' => 'Mesajınız başarıyla gönderildi. En kısa sürede size dönüş yapacağım!',
+    'contact_error_1' => 'Lütfen formu hızlı bir şekilde doldurmayın. Bu durum, şüpheli bir faaliyet olarak değerlendirilebilir.',
 ];

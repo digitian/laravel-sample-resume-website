@@ -10,6 +10,8 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SitemapController;
+use Illuminate\Cache\RateLimiting\Limit;
+use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Facades\Route;
 
 // Sitemap
@@ -46,7 +48,13 @@ Route::middleware('language_guard')->prefix('de')->as('de.')->group(function () 
     Route::get('portfolio/{slug}', [FrontendController::class, 'viewportfolio'])->name('portfolio.view');
 });
 
-Route::post('send-message', [ContactController::class, 'sendMessage'])->name('contact.message.send');
+RateLimiter::for('send-message', fn($request) =>
+    [Limit::perMinute(2)->by($request->ip()),
+     Limit::perHour(5)->by($request->ip())]
+);
+
+Route::post('send-message', [ContactController::class, 'sendMessage'])->name('contact.message.send')
+->middleware('throttle:send-message');
 
 Route::middleware(['auth', 'role:admin', 'admin.language'])->as('admin.')->prefix('admin')->group(function () {
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');

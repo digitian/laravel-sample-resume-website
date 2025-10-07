@@ -10,4 +10,5 @@ return [
     'message' => 'Nachricht',
     'send_message' => 'Nachricht senden',
     'success' => 'Ihre Nachricht wurde erfolgreich gesendet. Ich werde so bald wie möglich antworten!',
+    'contact_error_1' => 'Bitte füllen Sie das Formular nicht zu schnell aus. Dies könnte als verdächtige Aktivität gewertet werden.',
 ];

@@ -123,7 +123,7 @@
                   <div class="col-lg-8">
 
                     <!-- post text -->
-                    <div class="art-a art-card">
+                    <div class="art-a art-card blog-card">
                       {!! $post->content !!}
                     </div>
                     <!-- post text end -->

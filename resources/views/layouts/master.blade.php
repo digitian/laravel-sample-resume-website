@@ -56,7 +56,6 @@
     }
   </script>
   @yield('schema')
-  {!! RecaptchaV3::initJs() !!}
 </head>
 
 <body>

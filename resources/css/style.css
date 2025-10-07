@@ -2809,12 +2809,12 @@ html.is-animating .fade-left {
   width: 20px;
 }
 
-.art-card h1,
-.art-card h2,
-.art-card h3,
-.art-card h4,
-.art-card h5,
-.art-card h6 {
+.art-card.blog-card h1,
+.art-card.blog-card h2,
+.art-card.blog-card h3,
+.art-card.blog-card h4,
+.art-card.blog-card h5,
+.art-card.blog-card h6 {
   margin-bottom: 16px;
 }
 

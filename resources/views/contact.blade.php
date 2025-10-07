@@ -185,8 +185,12 @@
                           <!-- label -->
                           <label for="message"><i class="far fa-envelope"></i></label>
                         </div>
-                        {!! RecaptchaV3::field('send-message') !!}
                         <!-- form field end -->
+                        <div style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;">
+                          <label for="company_website">Leave this field empty</label>
+                          <input id="company_website" name="company_website" autocomplete="off" tabindex="-1">
+                        </div>
+                        <input type="hidden" name="started_at" value="{{ now()->timestamp }}">
                         <!-- button -->
                         <div class="art-submit-frame">
                           <button class="art-btn art-btn-md art-submit" type="submit"><span>{{ __('contact.send_message') }}</span></button>
