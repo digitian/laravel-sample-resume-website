@@ -185,7 +185,7 @@
                           <!-- label -->
                           <label for="message"><i class="far fa-envelope"></i></label>
                         </div>
-                        {!! RecaptchaV3::field('contact') !!}
+                        {!! RecaptchaV3::field(route('contact.message.send')) !!}
                         <!-- form field end -->
                         <!-- button -->
                         <div class="art-submit-frame">

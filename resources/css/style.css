@@ -2808,3 +2808,19 @@ html.is-animating .fade-left {
 .art-table ul li h6 i {
   width: 20px;
 }
+
+.art-card h1,
+.art-card h2,
+.art-card h3,
+.art-card h4,
+.art-card h5,
+.art-card h6 {
+  margin-bottom: 16px;
+}
+
+.art-card b,
+.art-card strong {
+  font-weight: bold;
+}
+
+.grecaptcha-badge { visibility: hidden !important; }
