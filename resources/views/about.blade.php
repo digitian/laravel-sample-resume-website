@@ -137,8 +137,6 @@
                                         <p>
                                             {{ __('about.ege_desc') }}
                                         </p>
-                                        <a data-fancybox="diplome" data-no-swup href="files/certificate.jpg"
-                                            class="art-link art-color-link art-w-chevron">Diplome</a>
                                     </div>
                                 </div>
 
