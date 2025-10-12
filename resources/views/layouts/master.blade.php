@@ -9,6 +9,32 @@
   <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/images/favicon/favicon-32x32.png') }}">
   <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/images/favicon/favicon-16x16.png') }}">
   <link rel="manifest" href="{{ asset('assets/images/favicon/site.webmanifest') }}">
+  <meta property="og:site_name" content="Hüseyin Emeci">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ url()->current() }}">
+  <meta property="og:locale" content="{{ app()->getLocale() }}_{{ strtoupper(app()->getLocale() === 'en' ? 'US' : app()->getLocale()) }}">
+  @switch(app()->getLocale())
+  @case('tr')
+<meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="de_DE">
+  @break
+
+  @case('en')
+  <meta property="og:locale:alternate" content="tr_TR">
+  <meta property="og:locale:alternate" content="de_DE">
+  @break
+
+  @case('de')
+  <meta property="og:locale:alternate" content="tr_TR">
+  <meta property="og:locale:alternate" content="en_US">
+  @break
+
+  @default
+  <meta property="og:locale:alternate" content="tr_TR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="de_DE">
+  @endswitch
+
   @yield('seo')
 
   <!-- color of address bar in mobile browser -->

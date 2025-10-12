@@ -7,9 +7,6 @@
 
   <meta property="og:title" content="{{ __('main.homepage') }} - {{ __('main.website_title') }}">
   <meta property="og:description" content="{{ __('main.desc_home') }}">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="{{ url()->current() }}">
-  <meta property="og:locale" content="{{ app()->getLocale() }}">
 
   <meta property="og:image" content="{{ asset('assets/images/huseyin-emeci.jpg') }}">
   <meta property="og:image:width" content="1200">
