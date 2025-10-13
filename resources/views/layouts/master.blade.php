@@ -81,8 +81,8 @@
           "@@type": "WebSite",
           "@@id": "https://huseyinemeci.com/#website",
           "url": "https://huseyinemeci.com",
-          "name": "{{ app()->getLocale === 'tr' ? 'Hüseyin Emeci' : 'Huseyin Emeci' }}",
-          "alternateName" = "{{ app()->getLocale === 'tr' ? 'Huseyin Emeci' : 'Hüseyin Emeci' }}",
+          "name": "{{ app()->getLocale() === 'tr' ? 'Hüseyin Emeci' : 'Huseyin Emeci' }}",
+          "alternateName" = "{{ app()->getLocale() === 'tr' ? 'Huseyin Emeci' : 'Hüseyin Emeci' }}",
           "inLanguage": "{{ app()->getLocale() }}-{{ strtoupper((app()->getLocale() === 'en' ? 'US' : app()->getLocale())) }}",
           "publisher": { "@@id": "https://huseyinemeci.com/#person" },
           "logo": {
