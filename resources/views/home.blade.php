@@ -79,7 +79,8 @@
                 <!-- main title -->
                 <div class="art-banner-title">
                   <!-- title -->
-                  <h1 class="mb-15">{{ __('main.welcome_text_1') }}<br>{{ __('main.welcome_text_2') }}!</h1>
+                  <h1 class="text-secondary">Hüseyin Emeci</h1>
+                  <h2 class="mb-15">{{ __('main.welcome_text_1') }}<br>{{ __('main.welcome_text_2') }}!</h2>
                   <!-- suptitle -->
                   <div class="art-lg-text art-code mb-25">&lt;<i>code</i>&gt;<span class="txt-rotate" data-period="2000"
                       data-rotate='[ "{{ __('main.top_text_1') }}.", "{{ __('main.top_text_2') }}.", "{{ __('main.top_text_3') }}.", "{{ __('main.top_text_4') }}." ]'></span>&lt;/<i>code</i>&gt;</div>
@@ -171,4 +172,5 @@
   <!-- swup container end -->
 
 </div>
+
 @endsection

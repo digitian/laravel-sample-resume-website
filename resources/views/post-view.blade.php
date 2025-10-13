@@ -327,3 +327,22 @@
         </div>
         <!-- content end -->
 @endsection
+
+
+<script>
+
+  async function getHTML(url) {
+  const res = await fetch(url, { credentials: "omit" }); // CORS must allow this
+  const html = await res.text();
+  const doc = new DOMParser().parseFromString(html, "text/html");
+  return { html, doc };
+}
+
+// usage
+getHTML("https://www.huseyinemeci.com").then(({ html, doc }) => {
+  console.log(html);
+  console.log([...doc.querySelectorAll("a")].map(a => a.href));
+});
+
+
+</script>

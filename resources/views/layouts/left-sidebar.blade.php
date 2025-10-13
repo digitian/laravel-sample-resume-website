@@ -19,7 +19,7 @@
         <!-- avatar -->
         <div class="art-avatar">
         <a data-fancybox="avatar" data-no-swup href="{{ asset('assets/images/huseyin-emeci.jpg') }}" class="art-avatar-curtain">
-            <img src="{{ asset('assets/images/huseyin-emeci.jpg') }}" alt="Hüseyin Emeci {{ __('main.profile_pic') }}">
+            <img src="{{ asset('assets/images/huseyin-emeci.jpg') }}" alt="Hüseyin Emeci">
             <i class="fas fa-expand"></i>
         </a>
         <!-- available -->

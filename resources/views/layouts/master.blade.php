@@ -69,14 +69,28 @@
           "name": "Hüseyin Emeci",
           "url": "https://huseyinemeci.com",
           "image": "{{ asset('assets/images/huseyin-emeci.jpg') }}"
+          "sameAs": [
+              "https://www.linkedin.com/in/huseyin-emeci-731528197/",
+              "https://github.com/digitian",
+              "https://x.com/huseyinemeci",
+              "https://www.facebook.com/emeci.huseyin",
+              "https://www.instagram.com/huseyinemeci/"
+          ]
         },
         {
           "@@type": "WebSite",
           "@@id": "https://huseyinemeci.com/#website",
           "url": "https://huseyinemeci.com",
-          "name": "Hüseyin Emeci",
-          "inLanguage": "tr-TR",
-          "publisher": { "@@id": "https://huseyinemeci.com/#person" }
+          "name": "{{ app()->getLocale === 'tr' ? 'Hüseyin Emeci' : 'Huseyin Emeci' }}",
+          "alternateName" = "{{ app()->getLocale === 'tr' ? 'Huseyin Emeci' : 'Hüseyin Emeci' }}",
+          "inLanguage": "{{ app()->getLocale() }}-{{ strtoupper((app()->getLocale() === 'en' ? 'US' : app()->getLocale())) }}",
+          "publisher": { "@@id": "https://huseyinemeci.com/#person" },
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://huseyinemeci.com/assets/images/favicon/android-chrome-512x512.png",
+            "width": 512,
+            "height": 512
+          }
         }
       ]
     }
