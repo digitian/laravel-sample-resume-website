@@ -68,7 +68,7 @@
           "@@id": "https://huseyinemeci.com/#person",
           "name": "Hüseyin Emeci",
           "url": "https://huseyinemeci.com",
-          "image": "{{ asset('assets/images/huseyin-emeci.jpg') }}"
+          "image": "{{ asset('assets/images/huseyin-emeci.jpg') }}",
           "sameAs": [
               "https://www.linkedin.com/in/huseyin-emeci-731528197/",
               "https://github.com/digitian",
@@ -82,7 +82,7 @@
           "@@id": "https://huseyinemeci.com/#website",
           "url": "https://huseyinemeci.com",
           "name": "{{ app()->getLocale() === 'tr' ? 'Hüseyin Emeci' : 'Huseyin Emeci' }}",
-          "alternateName" = "{{ app()->getLocale() === 'tr' ? 'Huseyin Emeci' : 'Hüseyin Emeci' }}",
+          "alternateName": "{{ app()->getLocale() === 'tr' ? 'Huseyin Emeci' : 'Hüseyin Emeci' }}",
           "inLanguage": "{{ app()->getLocale() }}-{{ strtoupper((app()->getLocale() === 'en' ? 'US' : app()->getLocale())) }}",
           "publisher": { "@@id": "https://huseyinemeci.com/#person" },
           "logo": {
