@@ -41,7 +41,7 @@
 <!-- footer -->
 <div class="container-fluid">
     <footer>
-        <div class="art-copy">© 2025 Hüseyin Emeci</div>
+        <div class="art-copy">© 2025 {{ config('app.full_name') }}</div>
         <div>{{ __('main.copyright') }}</div>
     </footer>
 </div>

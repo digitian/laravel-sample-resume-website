@@ -142,7 +142,7 @@
                             <h6>{{ __('blog.date') }}:</h6><span>{{ $post->created_at->translatedFormat('j M Y') }}</span>
                           </li>
                           <li>
-                            <h6>{{ __('blog.author') }}:</h6><span>Hüseyin Emeci</span>
+                            <h6>{{ __('blog.author') }}:</h6><span>{{ config('app.full_name') }}</span>
                           </li>
                           @if ($post->category)
                           <li>

@@ -15,6 +15,10 @@ return [
 
     'name' => env('APP_NAME', 'Laravel'),
 
+
+    
+    'full_name' => env('APP_RESUME_FULL_NAME', 'Please specify the full name in .env'),
+
     /*
     |--------------------------------------------------------------------------
     | Application Environment

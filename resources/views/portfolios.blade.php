@@ -14,7 +14,7 @@
     <meta property="og:image" content="{{ asset('assets/images/huseyin-emeci.jpg') }}">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Hüseyin Emeci">
+    <meta property="og:image:alt" content="{{ config('app.full_name') }}">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ __('main.portfolio') }} - {{ __('main.website_title') }}">

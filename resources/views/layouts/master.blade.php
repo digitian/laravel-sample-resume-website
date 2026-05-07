@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/images/favicon/favicon-32x32.png') }}">
   <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/images/favicon/favicon-16x16.png') }}">
   <link rel="manifest" href="{{ asset('assets/images/favicon/site.webmanifest') }}">
-  <meta property="og:site_name" content="Hüseyin Emeci">
+  <meta property="og:site_name" content="{{ config('app.full_name') }}">
   <meta property="og:type" content="website">
   <meta property="og:url" content="{{ url()->current() }}">
   <meta property="og:locale" content="{{ app()->getLocale() }}_{{ strtoupper(app()->getLocale() === 'en' ? 'US' : app()->getLocale()) }}">
@@ -41,7 +41,7 @@
   <meta name="theme-color" content="#2B2B35">
   @vite(['resources/css/app.css'])
 
-  <title>@yield('title', 'Hüseyin Emeci') - {{ __('main.website_title') }}</title>
+  <title>@yield('title', config('app.full_name')) - {{ __('main.website_title') }}</title>
 
   <style>
     .art-info-bar .art-header .art-avatar .art-lamp-light .art-available-lamp:after {
@@ -66,23 +66,23 @@
         {
           "@@type": "Person",
           "@@id": "https://huseyinemeci.com/#person",
-          "name": "Hüseyin Emeci",
+          "name": "{{ config('app.full_name') }}",
           "url": "https://huseyinemeci.com",
           "image": "{{ asset('assets/images/huseyin-emeci.jpg') }}",
           "sameAs": [
-              "https://www.linkedin.com/in/huseyin-emeci-731528197/",
-              "https://github.com/digitian",
-              "https://x.com/huseyinemeci",
-              "https://www.facebook.com/emeci.huseyin",
-              "https://www.instagram.com/huseyinemeci/"
+              "{{ env('APP_LINKEDIN') }}",
+              "{{ env('APP_GITHUB') }}",
+              "{{ env('APP_X') }}",
+              "{{ env('APP_FACEBOOK') }}",
+              "{{ env('APP_INSTAGRAM') }}"
           ]
         },
         {
           "@@type": "WebSite",
           "@@id": "https://huseyinemeci.com/#website",
           "url": "https://huseyinemeci.com",
-          "name": "{{ app()->getLocale() === 'tr' ? 'Hüseyin Emeci' : 'Huseyin Emeci' }}",
-          "alternateName": "{{ app()->getLocale() === 'tr' ? 'Huseyin Emeci' : 'Hüseyin Emeci' }}",
+          "name": "{{ config('app.full_name') }}",
+          "alternateName": "{{ config('app.full_name') }}",
           "inLanguage": "{{ app()->getLocale() }}-{{ strtoupper((app()->getLocale() === 'en' ? 'US' : app()->getLocale())) }}",
           "publisher": { "@@id": "https://huseyinemeci.com/#person" },
           "logo": {
@@ -135,7 +135,7 @@
       <!-- preloader content -->
       <div class="art-preloader-content">
         <!-- title -->
-        <h4>Hüseyin Emeci</h4>
+        <h4>{{ config('app.full_name') }}</h4>
         <!-- progressbar -->
         <div id="preloader" class="art-preloader-load"></div>
       </div>

@@ -11,7 +11,7 @@
   <meta property="og:image" content="{{ asset('assets/images/huseyin-emeci.jpg') }}">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Hüseyin Emeci">
+  <meta property="og:image:alt" content="{{ config('app.full_name') }}">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ __('main.homepage') }} - {{ __('main.website_title') }}">
@@ -79,7 +79,7 @@
                 <!-- main title -->
                 <div class="art-banner-title">
                   <!-- title -->
-                  <h1 class="text-secondary">Hüseyin Emeci</h1>
+                  <h1 class="text-secondary">{{ config('app.full_name') }}</h1>
                   <h2 class="mb-15">{{ __('main.welcome_text_1') }}<br>{{ __('main.welcome_text_2') }}!</h2>
                   <!-- suptitle -->
                   <div class="art-lg-text art-code mb-25">&lt;<i>code</i>&gt;<span class="txt-rotate" data-period="2000"

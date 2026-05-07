@@ -14,7 +14,7 @@
     <meta property="og:image" content="{{ Storage::url($portfolio->images[0]) }}">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Hüseyin Emeci">
+    <meta property="og:image:alt" content="{{ config('app.full_name') }}">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ $portfolio->title }} - {{ __('main.website_title') }}">
@@ -247,7 +247,7 @@
                                             <h6>{{ __('portfolio.date') }}:</h6><span>{{ $portfolio->created_at->translatedFormat('j M Y') }}</span>
                                         </li>
                                         <li>
-                                            <h6>{{ __('portfolio.author') }}:</h6><span>Hüseyin Emeci</span>
+                                            <h6>{{ __('portfolio.author') }}:</h6><span>{{ config('app.full_name') }}</span>
                                         </li>
                                         @if ($portfolio->github_link)
                                             <li>

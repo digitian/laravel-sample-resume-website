@@ -1,61 +1,278 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Resume App
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+This repository is a multilingual Laravel resume and portfolio app with a public website and a small admin panel.
 
-## About Laravel
+It is not a finished product yet. Some content is managed from the database, but a lot of personal/profile data is still hardcoded in Blade templates, translation files, JavaScript, and public assets. The goal of this README is to make that split obvious so the next person can maintain the project without guessing.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Status
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- Public pages exist for `tr`, `en`, and `de`.
+- The admin panel can manage services, blog posts, portfolios, and contact messages.
+- Reviews/comments are not implemented yet.
+- The admin dashboard is mostly a placeholder.
+- The project still contains Laravel/Breeze scaffold files that are no longer wired to real routes.
+- The test suite is partially outdated for the current route structure.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+For the detailed "where do I edit this?" map, see [docs/editing-guide.md](docs/editing-guide.md).
 
-## Learning Laravel
+## What The App Does
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Public website:
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- Home page
+- About page
+- Portfolio listing and portfolio detail pages
+- Blog listing and blog detail pages
+- Contact page with a contact form
+- Language switcher for Turkish, English, and German
+- SEO tags and sitemap
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Admin area:
 
-## Laravel Sponsors
+- Login at `/admin/login`
+- Service CRUD
+- Blog CRUD
+- Portfolio CRUD
+- Message inbox
+- Basic account settings
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## Tech Stack
 
-### Premium Partners
+- PHP 8.2+
+- Laravel 12
+- MySQL by default
+- Vite for CSS builds
+- Laravel Breeze for auth scaffolding
+- Spatie Permission
+- Spatie Sitemap
+- PHP Flasher / Notyf
+- TinyMCE in admin forms
+- Theme/vendor frontend assets loaded from `public/assets`
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+## Content Sources
 
-## Contributing
+This app uses more than one source of truth.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+| Area | Source | Notes |
+| --- | --- | --- |
+| Services | Database via admin panel | Localized records |
+| Blog posts | Database via admin panel | Localized records, shared image per language group |
+| Portfolios | Database via admin panel | Localized records, shared gallery per language group |
+| Contact messages | Database via public form | Read in admin panel |
+| Home hero text | Translation files | `lang/{locale}/main.php` |
+| About page text | Translation files and Blade | `lang/{locale}/about.php` plus `resources/views/about.blade.php` |
+| Resume sidebar | Blade, env, JavaScript, public assets | Photo, age, skills, CV links are not database-driven |
+| Contact card details | Blade | Phone, email, social profile links are hardcoded in the page |
+| Shared SEO/schema | Blade, config, env, controller | Domain and analytics are partly hardcoded |
+| Images, PDFs, theme assets | `public/assets` | Manual file replacement |
 
-## Code of Conduct
+## Project Structure
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+| Path | Purpose |
+| --- | --- |
+| `app/Http/Controllers` | Frontend, contact, admin, auth, sitemap controllers |
+| `app/Http/Middleware` | Public locale switching and admin locale switching |
+| `app/Models` | Eloquent models |
+| `database/migrations` | Table structure |
+| `database/seeders` | Admin user and role seeders |
+| `resources/views` | Blade templates for public and admin UIs |
+| `lang/tr`, `lang/en`, `lang/de` | Localized UI and page copy |
+| `resources/css` | CSS source imported by Vite |
+| `public/assets` | Live frontend JS, images, PDFs, admin assets, plugins |
+| `routes/web.php` | Public, admin, sitemap, and contact routes |
+| `tests` | Mostly Laravel scaffold tests; some no longer match the app |
+| `docs/editing-guide.md` | Detailed maintenance and edit map |
 
-## Security Vulnerabilities
+## Localization Model
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+The app uses three locales:
 
-## License
+- Turkish: default locale, no prefix
+- English: `/en/...`
+- German: `/de/...`
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+For database content:
+
+- Services, blog posts, and portfolios are created as language groups.
+- Each group shares a `parent_id`.
+- The Turkish record acts as the base record and is the one shown in admin index screens.
+- Public pages load the current locale only.
+
+Important consequence:
+
+- If you create or maintain database content outside the admin panel, keep the `tr`, `en`, and `de` records aligned by `parent_id`.
+
+## Setup
+
+### 1. Requirements
+
+- PHP 8.2 or newer
+- Composer
+- Node.js and npm
+- MySQL or another Laravel-supported database
+
+### 2. Install dependencies
+
+```bash
+composer install
+npm install
+```
+
+### 3. Create your environment file
+
+```bash
+cp .env.example .env
+php artisan key:generate
+```
+
+Update at least these values in `.env`:
+
+- `APP_NAME`
+- `APP_URL`
+- `APP_RESUME_FULL_NAME`
+- `APP_LINKEDIN`
+- `APP_GITHUB`
+- `APP_X`
+- `APP_FACEBOOK`
+- `APP_INSTAGRAM`
+- `DB_*`
+
+### 4. Prepare the database
+
+Create your database, then run:
+
+```bash
+php artisan migrate --seed
+php artisan storage:link
+```
+
+The seeders create an admin role and a default admin user.
+
+### 5. Build assets
+
+```bash
+npm run build
+```
+
+For local development you can also run:
+
+```bash
+npm run dev
+```
+
+### 6. Start the app
+
+```bash
+php artisan serve
+```
+
+Or run the combined dev command from Composer:
+
+```bash
+composer run dev
+```
+
+## Default Admin Login
+
+After `php artisan migrate --seed`:
+
+- URL: `/admin/login`
+- Email: `yonetici@huseyinemeci.com`
+- Password: `password`
+
+Change the password immediately in a real environment.
+
+## Common Edit Tasks
+
+Use this as a quick map:
+
+| If you want to change... | Start here |
+| --- | --- |
+| Full name used across the site | `.env` -> `APP_RESUME_FULL_NAME` |
+| Sidebar social icons | `.env` social links |
+| Home hero text | `lang/tr/main.php`, `lang/en/main.php`, `lang/de/main.php` |
+| About page biography text | `lang/*/about.php` |
+| About page dates, school names, company names | `resources/views/about.blade.php` |
+| Sidebar photo | `public/assets/images/huseyin-emeci.jpg` |
+| Sidebar age / skills list / CV button logic | `resources/views/layouts/left-sidebar.blade.php` |
+| Skill percentages and language button behavior | `public/assets/js/main.js` |
+| Home counters | `resources/views/layouts/achievements.blade.php` |
+| Contact phone/email/manual social links | `resources/views/contact.blade.php` |
+| Footer logos and copyright year | `resources/views/layouts/footer.blade.php` |
+| Resume PDF files | `public/assets/documents/` |
+| Blog content | Admin panel -> Blog |
+| Portfolio content | Admin panel -> Portfolio |
+| Services | Admin panel -> Services |
+| Shared SEO domain / analytics / schema | `resources/views/layouts/master.blade.php` |
+| Sitemap behavior | `app/Http/Controllers/SitemapController.php` |
+
+Again, the full breakdown lives in [docs/editing-guide.md](docs/editing-guide.md).
+
+## Asset Pipeline Notes
+
+This project has an important quirk:
+
+- Vite is used for CSS.
+- The public website JavaScript is loaded directly from `public/assets/js`.
+- `resources/js/main.js` exists, but the public site currently loads `public/assets/js/main.js`.
+
+That means:
+
+- CSS edits should usually happen in `resources/css/...` and then be rebuilt.
+- Frontend JavaScript edits that must affect the live site should be made in `public/assets/js/main.js`.
+
+## Known Gaps And Risks
+
+- Reviews/comments are not implemented, even though there is a route, migration, model, and admin menu entry.
+- The admin dashboard is mostly empty.
+- Admin notification/search UI still contains template placeholder content.
+- Contact information is split between `.env`, sidebar Blade, and `contact.blade.php`, so values can drift.
+- Portfolio image editing is not finished. The edit form itself says add/remove/reorder is not implemented yet.
+- Spatie Permission is installed, but the current admin gate is effectively just `role:admin`.
+- Structured data and some SEO/domain values are hardcoded to `https://huseyinemeci.com`.
+- Google Analytics is hardcoded in `resources/views/layouts/master.blade.php`.
+- `sort` columns exist in multiple tables but are not actively used in the current queries/UI.
+- `position` exists on `users`, but there is no working admin UI to manage it.
+- The project includes a no-captcha package and recaptcha env keys, but the contact form currently uses a honeypot, a minimum fill-time check, and rate limiting instead.
+- Some create forms expose a status toggle, but new records currently default to active because `status` is not mass-assignable on the related models.
+
+## Test Status
+
+As of 2026-05-07, `php artisan test` reports:
+
+- 7 passing tests
+- 18 failing tests
+
+The failures are expected from the current codebase state because many tests still target old Laravel/Breeze routes and views such as:
+
+- `/login`
+- `/register`
+- `/profile`
+- email verification routes
+- password reset routes
+- `layouts.guest`
+- `dashboard` route redirects
+
+So right now, the test suite should be treated as scaffold residue, not as reliable project coverage.
+
+## Related Files Worth Knowing
+
+- `routes/web.php`
+- `app/Http/Controllers/FrontendController.php`
+- `app/Http/Controllers/ContactController.php`
+- `app/Http/Controllers/SitemapController.php`
+- `resources/views/layouts/master.blade.php`
+- `resources/views/layouts/left-sidebar.blade.php`
+- `resources/views/contact.blade.php`
+- `public/assets/js/main.js`
+- `docs/editing-guide.md`
+
+## Next Recommended Cleanup Steps
+
+If this project is going to keep evolving, these are the most useful next steps:
+
+1. Move hardcoded personal data into a single settings source.
+2. Finish or remove the reviews/comments module.
+3. Decide whether frontend JS should live in Vite or remain in `public/assets/js`, then remove the duplicate source.
+4. Replace hardcoded domain/analytics values with config or env values.
+5. Rewrite or remove the outdated Breeze tests so the suite reflects the real app.

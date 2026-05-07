@@ -19,7 +19,7 @@
         <!-- avatar -->
         <div class="art-avatar">
         <a data-fancybox="avatar" data-no-swup href="{{ asset('assets/images/huseyin-emeci.jpg') }}" class="art-avatar-curtain">
-            <img src="{{ asset('assets/images/huseyin-emeci.jpg') }}" alt="Hüseyin Emeci">
+            <img src="{{ asset('assets/images/huseyin-emeci.jpg') }}" alt="{{ config('app.full_name') }}">
             <i class="fas fa-expand"></i>
         </a>
         <!-- available -->
@@ -30,7 +30,7 @@
         </div>
         <!-- avatar end -->
         <!-- name -->
-        <h5 class="art-name mb-10"><a href="{{ route(app()->getLocale() . '.home') }}">Hüseyin Emeci</a></h5>
+        <h5 class="art-name mb-10"><a href="{{ route(app()->getLocale() . '.home') }}">{{ config('app.full_name') }}</a></h5>
         <!-- post -->
         <div class="art-sm-text">{{ __('main.job_definition') }}</div>
     </div>
@@ -201,7 +201,7 @@
         <div class="art-links-frame p-15-15">
 
         <!-- download cv button -->
-        <a href="{{ app()->getLocale() === 'tr' ? asset('assets/documents/huseyin-emeci-turkce-ozgecmis.pdf') : asset('assets/documents/huseyin-emeci-english-resume.pdf') }}" id="leftbar-text-3" class="art-link" download data-no-swup>{{ __('main.download_cv') }} <i class="fas fa-download"></i></a>
+        <a href="{{ app()->getLocale() === 'tr' ? asset('assets/documents/sample-cv-tr.pdf') : asset('assets/documents/sample-cv-en.pdf') }}" id="leftbar-text-3" class="art-link" download data-no-swup>{{ __('main.download_cv') }} <i class="fas fa-download"></i></a>
 
         </div>
         <!-- links frame end -->
@@ -212,15 +212,15 @@
     <!-- sidebar social -->
     <div class="art-ls-social">
         <!-- social link -->
-        <a href="https://www.linkedin.com/in/huseyin-emeci-731528197/" data-no-swup target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+        <a href="{{ env('APP_LINKEDIN') }}" data-no-swup target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
         <!-- social link -->
-        <a href="https://github.com/digitian" data-no-swup target="_blank"><i class="fab fa-github" rel="noopener noreferrer"></i></a>
+        <a href="{{ env('APP_GITHUB') }}" data-no-swup target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
         <!-- social link -->
-        <a href="https://x.com/huseyinemeci" data-no-swup target="_blank"><i class="fab fa-twitter" rel="noopener noreferrer"></i></a>
+        <a href="{{ env('APP_X') }}" data-no-swup target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
         <!-- social link -->
-        <a href="https://www.facebook.com/emeci.huseyin" data-no-swup target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+        <a href="{{ env('APP_FACEBOOK') }}" data-no-swup target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
         <!-- social link -->
-        <a href="https://www.instagram.com/huseyinemeci/" data-no-swup target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+        <a href="{{ env('APP_INSTAGRAM') }}" data-no-swup target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
     </div>
     <!-- sidebar social end -->
 
